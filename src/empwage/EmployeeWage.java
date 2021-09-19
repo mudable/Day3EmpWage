@@ -2,17 +2,21 @@ package empwage;
 
 import java.util.Random;
 
-public class EmployeeWage {
 
-	public static void main(String[] args) {
-		final int IS_PART_TIME = 1;
-		final int IS_FULL_TIME = 2;
-		int EMP_RATE_PER_HOUR = 100;
-		int NO_OF_WORKING_DAYS = 20;
-		int MAX_HRS_IN_THE_MONTH = 10;
-		{
-			int empHrs = 0;
-			int totalEmpHrs = 0;
+
+public class EmployeeWage {
+	
+
+	final static int IS_PART_TIME=1;
+	final static int IS_FULL_TIME=2;
+	static int EMP_RATE_PER_HOUR=100;
+	 static int NO_OF_WORKING_DAYS=20;
+	 static int MAX_HRS_IN_THE_MONTH=10;
+
+	 public void Emp() {
+		
+		int empHrs = 0;
+	    int totalEmpHrs = 0;
 			int totalWorkingDays = 0;
 			while (totalEmpHrs <= MAX_HRS_IN_THE_MONTH && totalWorkingDays < NO_OF_WORKING_DAYS) {
 				totalWorkingDays++;
@@ -38,8 +42,11 @@ public class EmployeeWage {
 			}
 			int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
 			System.out.println("Total Emp Wage:" + totalEmpWage);
-
 		}
+	
+		
+	public static void main(String[] args) {
+		EmployeeWage empwage = new EmployeeWage();
+		empwage.Emp();
 	}
-
 }
